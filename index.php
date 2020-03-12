@@ -1,8 +1,8 @@
 <?php 
-
+session_start();
 include './includes/header.php';
 require './conn/conn.php';
-
+include './includes/nav.php';
 ?>
 
     <div class="container titulo">

@@ -15,5 +15,15 @@
 }
 
 .h12{
-    margin-left: 350px;
+    margin-left: 400px;
+    margin-top: 20px;
+}
+
+.coluna{
+    width: 220%;
+
+}
+
+.spaces{
+    margin-bottom: 30px;
 }

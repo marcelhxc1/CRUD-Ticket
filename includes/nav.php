@@ -7,7 +7,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Listar Tickets</a>
+                    <a class="nav-link" href="/listar-tickets.php">Listar Tickets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tickets.php">Abrir Ticket</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="logout.php">Sair</a></a>
