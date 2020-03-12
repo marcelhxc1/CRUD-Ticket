@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+if (!isLoggedIn()):
+header('Location: index.php');
+endif;
+
 include './includes/header.php';
 require './conn/conn.php';
 
