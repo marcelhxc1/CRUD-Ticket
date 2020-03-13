@@ -52,8 +52,6 @@ require './conn/conn.php';
           </form>
         </div>
       </div>
-        
-
 <?php 
 
 include './includes/footer.php';

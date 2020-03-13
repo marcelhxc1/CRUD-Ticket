@@ -57,10 +57,6 @@ include './includes/edite.php';
           </form>
         </div>
       </div>
-        
-
 <?php 
-
 include './includes/footer.php';
-
 ?>

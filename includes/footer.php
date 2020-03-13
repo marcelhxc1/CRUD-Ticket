@@ -13,9 +13,6 @@
       <a href=""> Marcel Bueno Teste</a>
     </div>
     <!-- Copyright -->
-
     </footer>
-  
-  
   </body>
 </html>
