@@ -3,6 +3,9 @@ session_start();
 include './includes/header.php';
 require './conn/conn.php';
 
+if(empty($_SESSION)){
+  header('Location: /index.php');
+}
 ?>
 
     <?php include './includes/nav.php' ?>
