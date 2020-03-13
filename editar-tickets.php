@@ -27,7 +27,7 @@ include './includes/edite.php';
             <div class="form-row">
               <div class="form-group coluna">
                 <label for="descricao">Descrição do Problema</label>
-                <textarea class="form-control coluna" id="texto" rows="3" required name="descricao" placeholder="<?= $tickets[0]['descricao'] ?>" value="<?= $tickets[0]['descricao'] ?>"></textarea>
+                <textarea class="form-control coluna" id="texto" rows="3" required name="descricao" placeholder="<?= $tickets[0]['descricao'] ?>"></textarea>
               </div>
             </div>
             <div class="form-group coluna">
