@@ -39,3 +39,25 @@ function validar(){
             }
            
         }
+
+
+
+        $("#remove").click(function (e) {
+            var obj = $(this); 
+            var id = $(this).data('id'); 
+            $.ajax({
+                url: "/deletar.php",
+                data: { id: id },
+                type: "Post",
+                dataType: "Json",
+                success: function(result) {
+                    if (result.Success) {
+                        $(obj).closest("tr").remove();
+                    }
+                    eval(result.Script);
+                },
+                
+               
+            });
+            
+        });

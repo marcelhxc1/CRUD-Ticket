@@ -12,7 +12,7 @@ include './includes/nav.php';
     </div>
     <div class="container">
         <div class="row formu">
-            <form method="post" action="login.php">
+            <form method="post" action="./includes/login.php">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>
                     <input type="email" class="form-control" id="email" name="email" value="" aria-describedby="emailHelp" placeholder="Enter email">

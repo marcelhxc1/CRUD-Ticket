@@ -1,62 +1,63 @@
 <?php
 session_start();
-
-if (!isLoggedIn()):
-  header('Location: index.php');
-  endif;
-  
 include './includes/header.php';
 require './conn/conn.php';
 
-?>
-  <?php include './includes/nav.php' ?>
+$id = $_POST['id'];
 
-        <form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-  </div>
-  <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
-</form>
+include './includes/edite.php';
+
+?>
+
+    <?php include './includes/nav.php' ?>
+      <div class="container">
+        <div class="row text-center">
+          <h1 class="text-center h12">Edite seu chamado</h1>
+        </div>
+      </div>
+      <div class="container spaces">
+        <div class="row formu2">
+          <form method="post" action="./includes/edit.php" name="forms">
+            <div class="form-row">
+              <div class="form-group coluna">
+                <label for="titulo">Titulo</label>
+                <input type="text" class="form-control" id="titulo" required name="titulo" placeholder="Seu titulo aqui" value="<?= $tickets[0]['titulo'] ?>">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group coluna">
+                <label for="descricao">Descrição do Problema</label>
+                <textarea class="form-control coluna" id="texto" rows="3" required name="descricao" placeholder="<?= $tickets[0]['descricao'] ?>" value="<?= $tickets[0]['descricao'] ?>"></textarea>
+              </div>
+            </div>
+            <div class="form-group coluna">
+              <label for="data">Data</label>
+              <input type="text" class="form-control" id="data"  name="data" readonly=“true” value="<?= date("d/m/Y"); ?>">
+            </div>
+            <div class="form-group coluna">
+              <label for="prioridade">Prioridade</label>
+              <select id="prioridade" class="form-control" required name="prioridade">
+                  <option selected value="">Escolha a prioridade</option>
+                  <option value="Alta">Alta</option>
+                  <option value="Média">Média</option>
+                  <option value="Baixa">Baixa</option>
+                </select>
+            </div>
+            <div class="form-group coluna">
+              <label for="status">Status</label>
+              <select id="status" class="form-control" required name="status">
+                  <option selected value="">Status</option>
+                  <option value="Aberto">Aberto</option>
+                  <option value="Fechado">Fechado</option>
+                  <option value="Redirecionado">Redirecionado</option>
+                </select>
+            </div>
+            <input type="hidden" name="id" value="<?= $id ?>" />
+            <button type="submit" class="btn btn-primary">Editar chamado</button>
+          </form>
+        </div>
+      </div>
+        
 
 <?php 
 

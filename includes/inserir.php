@@ -1,7 +1,7 @@
 <?php
  session_start();
 // inclui o arquivo de inicialização
-require './conn/conn.php';
+require '../conn/conn.php';
  
 // resgata variáveis do formulário
 $titulo = $_POST['titulo'];
@@ -23,4 +23,4 @@ $sql = "INSERT INTO tickets (id, titulo, descricao,data,prioridade,status, usuar
 $stmt = $PDO->prepare($sql);
 $stmt->execute(['', $titulo, $descricao, $data, $prioridade, $status, $users[0]['id']]);
 
-header('Location: tickets.php');
+header('Location: /tickets.php');

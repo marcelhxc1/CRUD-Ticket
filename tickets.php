@@ -13,7 +13,7 @@ require './conn/conn.php';
       </div>
       <div class="container spaces">
         <div class="row formu2">
-          <form method="post" action="inserir.php" name="forms">
+          <form method="post" action="./includes/inserir.php" name="forms">
             <div class="form-row">
               <div class="form-group coluna">
                 <label for="titulo">Titulo</label>
