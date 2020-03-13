@@ -47,3 +47,13 @@ O banco de dados contem apenas duas tabelas, sendo uma para usuarios e outra par
 A criptografia da senha foi feita com hash MD5, visando não deixar em modo texto. 
 
 Arquivo sql do banco está no projeto.
+
+## Técnologias utilizadas ##
+
+1 - PHP 7
+2 - Bootstrap 4 (Front-end)
+3 - CSS
+4 - JS
+5 - MYSQL
+
+
