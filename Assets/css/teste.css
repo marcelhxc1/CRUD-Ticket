@@ -31,3 +31,9 @@
 .spaces2{
     margin-top:40px;
 }
+
+.autos{
+    margin: 0 auto;
+    margin-top:25px;
+    margin-bottom: 200px;
+}

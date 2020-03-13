@@ -22,7 +22,10 @@ include './includes/nav.php';
                     <input type="password" class="form-control" id="senha" name="senha" value="" placeholder="Password">
                 </div>
                 <button type="submit" class="btn btn-primary">Entrar</button>
+                OU
+                <button class="btn btn-primary"><a href="registro.php" style="color:white;">Cadastrar</a></button>
             </form>
+
         </div>
     </div>
 <?php 

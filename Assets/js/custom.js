@@ -40,24 +40,37 @@ function validar(){
            
         }
 
+        
+        function envioReg() {
 
+            var r=confirm("Conta criada com sucesso");
+            if (r==true) {
+            window.location="index.php";
+            teste.submit();
+            }
+        }
 
-        $("#remove").click(function (e) {
-            var obj = $(this); 
-            var id = $(this).data('id'); 
-            $.ajax({
-                url: "/deletar.php",
-                data: { id: id },
-                type: "Post",
-                dataType: "Json",
-                success: function(result) {
-                    if (result.Success) {
-                        $(obj).closest("tr").remove();
-                    }
-                    eval(result.Script);
-                },
-                
-               
-            });
+        function validarReg(){
+            var nome = forms1.nome.value;
+            var email = forms1.email.value;
+            var senha = forms1.password.value;
             
-        });
+            if(nome == ""){
+                alert('Preencha o campo de nome.');
+                formuser.nome.focus();
+                return false;
+            }
+            
+            if(email == ""){
+                alert('Preenchao e-mail.');
+                formuser.email.focus();
+                return false;
+            }
+
+            if(senha == ""){
+                alert('Preencha a senha.');
+                formuser.senha.focus();
+                return false;
+            }
+           
+        }
